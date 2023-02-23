@@ -1,11 +1,15 @@
 ---
 title: "A3: SPL Library Checkouts"
+author: "Natalie Olson"
+date: "02/22/2023"
 output: html_document
 ---
 
 ### Introduction
 
 An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+
+When I saw that we were analyzing library data in class, I got super excited. I'm an avid reader, but I'm also super intrigued by popular book trends, especially following the pandemic when BookTok took off and reshaped the reading landscape. For my project, I chose to look at Leigh Bardugo's works in particular and their trends in popularity, as not only is she one of my favorite authors, but her books only seem to increase in popularity over the years.
 
 ### Summary Information
 
@@ -18,19 +22,16 @@ These will likely be calculated using your DPLYR skills, answering questions suc
 - What is the month or year with the most/least checkouts for ebooks?
 - How has the number of print book checkouts changed over time?
 
+
 Feel free to calculate and report values that you find relevant.
 
 ### The Dataset
 
-- Who collected/published the data?  
-- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
-- Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
-- What are possible limitations or problems with this data?   (at least 200 words)
-
+Seattle Public Library collects their monthly checkout data and publishes it for the public. Some of the parameters in this data set include, title, publication date, checkout month and year, genre, creator, material type, and number of checkouts among other examples. The data is generated from a variety of sources. Overdrive, hoopla, Freegal, and RBDigital provide electronic data for digital items while physical item checkout data was sourced from the Lebgrady artwork data archives from April 2005 to September 2016. Currently, physical item checkout data is collected from the Horizon ILS. This data set essentially acts as a monthly record of library checkouts, holding hundreds of thousands of checkouts over the years. In a sense, it acts as a marker of history from 2005 until the present.
+At first glance, this data set is quite messy; certain parameters are formatted strangely, such as Publication Year which has around seven different potential formats that each mean different things. In addition, other fields have such a wide variety of different answers that it may be difficult to find trends that don't occur over such a vast margin, such as when sorting by subjects. There are gaps in the data here and there and plenty of NA values, and given the size of the data set, there is quite a lot to sort through. There are certain variables that would've been useful to track alongside what has already been collected. For example, we may be able to draw conclusions about a book's quality or success based on the number of checkouts, but there isn't any other statistic provided that may strengthen those assumptions such as an average rating from Goodreads or something along those lines. We have no way of knowing the demographics of the people who are checking out items, as all that is tracked is information about the items themselves, so we cannot draw any conclusions about people or culture in relation to checkouts. Ultimately, this data set is just about library checkout data, so its scope only exists within that range.
 
 ### First Trends Over Time Chart
+# FIRST BOOK IN SERIES POPULARITY OVER TIME
 
 Include a chart. Make sure to describe why you included the chart, and what patterns emerged
 
