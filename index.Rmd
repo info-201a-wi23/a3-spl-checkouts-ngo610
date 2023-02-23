@@ -4,6 +4,27 @@ author: "Natalie Olson"
 date: "02/22/2023"
 output: html_document
 ---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+
+# load and install necessary ALL libraries
+
+library(dplyr)
+library(tidyverse)
+library(readr)
+library(ggplot2)
+library("lubridate")
+library("viridis")
+
+# load library dataframe
+library_df <- read_csv("2017-2023-10-Checkouts-SPL-Data.csv")
+
+# source all R files
+source('chart1.R')
+source('summary.R')
+
+
+```
 
 ### Introduction
 
@@ -48,8 +69,15 @@ When we say "clear" or "human readable" titles and labels, that means that you s
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
-```
+``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1.R")}
+source("chart1.R")
+``````
+
+This line plot tracks total checkouts for each Grishaverse novel from the years 2017-2022. What's notable about these charts is that due to a couple of these novels (**King of Scars** and **Rule of Wolves**) being first published in 2019 and 2021 respectively, there is a lack of checkout data for each of them earlier than that point. What I would like to find out is what Grishaverse novels do people check out the most? How could factors such as BookTok popularity and the release of a TV adaptation influence the number of checkouts for each novel and series?
+
+The Grisha Trilogy (**Shadow and Bone**, **Siege and Storm**, and **Rising and Rising**) was Bardugo's first published trilogy, and as seen in the line chart, this series has been checked out the most from the Seattle Public Library. In particular, the first novel, **Shadow and Bone**, has been checked out **`r summary_info$sab_checkouts`** times between 2017 and 2022! Checkouts for **Shadow and Bone** (and the rest of the Grisha Trilogy by extension) shot up around 2021, which was around the time of the Netflix Adaptation's release, also titled Shadow and Bone.
+
+What I found most interesting about this chart was my own expectations. **Six of Crows** is one of the most widely known and loved young adult fantasy novels of the past few years, and it tops nearly any reader's recommendations list, especially with its popularity on BookTok, so why did the number of checkouts decline after 2021? **Six of Crows** is the only novel of the seven I looked at to face such a noticeable dropoff, as reflected in the series chart as well. Although its sequel, **Crooked Kingdom**, still had a steady number of checkouts between 2021 and 2022 (around 500), the *Gregs Series** still fell off in popularity compared to the **Grisha Trilogy** and the **King of Scars Duology**.
 
 ### Second Trends Over Time Chart
 
@@ -68,8 +96,9 @@ When we say "clear" or "human readable" titles and labels, that means that you s
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
-```
+``````{r, echo = FALSE, code = readLines("chart2.R")}
+source("chart2.R")
+``````
 
 ### Your Choice
 
@@ -81,7 +110,8 @@ The last chart is up to you. It could be a line plot, scatter plot, histogram, b
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
-```
+
+#``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+#``````
 
 
