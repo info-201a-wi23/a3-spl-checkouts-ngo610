@@ -3,8 +3,11 @@ library(dplyr)
 library(tidyverse)
 library(readr)
 library(ggplot2)
+library("ggalt")
 library("lubridate")
 library("viridis")
+library("plotly")
+library("scales")
 
 # Load dataset
 library_df <- read.csv("./2017-2023-10-Checkouts-SPL-Data.csv")
