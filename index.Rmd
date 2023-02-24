@@ -6,6 +6,28 @@ output: html_document
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+<<<<<<< HEAD
+=======
+
+# load and install necessary ALL libraries
+
+library(dplyr)
+library(tidyverse)
+library(readr)
+library(ggplot2)
+library("lubridate")
+library("viridis")
+
+# load library dataframe
+library_df <- read_csv("2017-2023-10-Checkouts-SPL-Data.csv")
+
+# source all R files
+source('chart1.R')
+source('summary.R')
+
+
+```
+>>>>>>> 68ba237644ac09c0b877cdd324a017a9fb0aa239
 
 # load and install necessary ALL libraries
 
@@ -58,6 +80,7 @@ source('summary.R')
 
 With the increasing integration of technology within people's lives, fewer people are turning to books as a source of entertainment. When the COVID pandemic hit, people finally turned back to books after a steady decline in the number of readers slowly lowering since the beginning of the twenty-first century. With everyone stuck at home with not much better to do, book sales saw a massive increase, but especially eBooks, considering they're more portable and accessible. In the young adult setting, the creation of BookTok brought many readers back to the hobby as well and introducing new readers through this online community. 
 
+<<<<<<< HEAD
 This report looks over Leigh Bardugo's *Grishaverse* novels and their trends in popularity over the years, as not only is she one of my personal favorite authors, but she is one of the most prominent young adult fantasy authors right now. This report hopes to discover:
 
 - How did the pandemic affect library checkouts?
@@ -68,6 +91,11 @@ This report looks over Leigh Bardugo's *Grishaverse* novels and their trends in 
 This dataset is filtered to only include the seven *Grishaverse* novels (*Shadow and Bone, Siege and Storm, Ruin and Rising, Six of Crows, Crooked Kingdom, King of Scars*, and *Rule of Wolves*).
 
 ### Summary
+=======
+When I saw that we were analyzing library data in class, I got super excited. I'm an avid reader, but I'm also super intrigued by popular book trends, especially following the pandemic when BookTok took off and reshaped the reading landscape. For my project, I chose to look at Leigh Bardugo's works in particular and their trends in popularity, as not only is she one of my favorite authors, but her books only seem to increase in popularity over the years.
+
+### Summary Information
+>>>>>>> 68ba237644ac09c0b877cdd324a017a9fb0aa239
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
@@ -78,24 +106,33 @@ These will likely be calculated using your DPLYR skills, answering questions suc
 - What is the month or year with the most/least checkouts for ebooks?
 - How has the number of print book checkouts changed over time?
 
+<<<<<<< HEAD
 - What is the most popular *Grishaverse* novel? 
 - Most popular *Grishaverse* series?
 - How many checkouts of Bardugo's *Grishaverse* novels on average per year
 - What is the month from 2017-2022 with the most checkouts
 - Most popular material type for her books
 
+=======
+>>>>>>> 68ba237644ac09c0b877cdd324a017a9fb0aa239
 
 Feel free to calculate and report values that you find relevant.
 
 ### The Dataset
 
+<<<<<<< HEAD
 Seattle Public Library collects their monthly checkout data and publishes it for the public. Some of the parameters in this data set include, title, publication date, checkout month and year, genre, creator, material type, and number of checkouts among other examples. The data is generated from a variety of sources, including: Overdrive, hoopla, Freegal, and RBDigital which provide electronic data for digital items while physical item checkout data was sourced from the Lebgrady artwork data archives from April 2005 to September 2016. Currently, physical item checkout data is collected from the Horizon ILS. This data set essentially acts as a monthly record of library checkouts, holding hundreds of thousands of checkouts over the years. In a sense, it acts as a marker of history from 2005 until the present.
 
 At first glance, this data set is quite messy; certain parameters are formatted strangely, such as Publication Year which has around seven different potential formats that each mean different things. Many of the same books are referenced under different titles depending on the different material type. In addition, other fields have such a wide variety of different answers that it may be difficult to find trends that don't occur over such a vast margin, such as when sorting by subjects. There are gaps in the data here and there and plenty of NA values, and given the size of the data set, there is quite a lot to sort through. 
 
 There are certain variables that would've been useful to track alongside what has already been collected. For example, we may be able to draw conclusions about a book's quality or success based on the number of checkouts, but there isn't any other statistic provided that may strengthen those assumptions such as an average rating from Goodreads or something along those lines. We have no way of knowing the demographics of the people who are checking out items, as all that is tracked is information about the items themselves, so we cannot draw any conclusions about people or culture in relation to checkouts without making inferences. Ultimately, this data set is just about library checkout data, so its scope only exists within that range.
+=======
+Seattle Public Library collects their monthly checkout data and publishes it for the public. Some of the parameters in this data set include, title, publication date, checkout month and year, genre, creator, material type, and number of checkouts among other examples. The data is generated from a variety of sources. Overdrive, hoopla, Freegal, and RBDigital provide electronic data for digital items while physical item checkout data was sourced from the Lebgrady artwork data archives from April 2005 to September 2016. Currently, physical item checkout data is collected from the Horizon ILS. This data set essentially acts as a monthly record of library checkouts, holding hundreds of thousands of checkouts over the years. In a sense, it acts as a marker of history from 2005 until the present.
+At first glance, this data set is quite messy; certain parameters are formatted strangely, such as Publication Year which has around seven different potential formats that each mean different things. In addition, other fields have such a wide variety of different answers that it may be difficult to find trends that don't occur over such a vast margin, such as when sorting by subjects. There are gaps in the data here and there and plenty of NA values, and given the size of the data set, there is quite a lot to sort through. There are certain variables that would've been useful to track alongside what has already been collected. For example, we may be able to draw conclusions about a book's quality or success based on the number of checkouts, but there isn't any other statistic provided that may strengthen those assumptions such as an average rating from Goodreads or something along those lines. We have no way of knowing the demographics of the people who are checking out items, as all that is tracked is information about the items themselves, so we cannot draw any conclusions about people or culture in relation to checkouts. Ultimately, this data set is just about library checkout data, so its scope only exists within that range.
+>>>>>>> 68ba237644ac09c0b877cdd324a017a9fb0aa239
 
 ### First Trends Over Time Chart
+# FIRST BOOK IN SERIES POPULARITY OVER TIME
 
 ``````{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("chart1.R")}
 source("chart1.R")
@@ -109,6 +146,18 @@ This dataframe only tracks data from 2017 onwards, but it looks as though the **
 
 The ***King of Scars Duology*** has the lowest number of checkouts all around, although, in 2022, it started catching up to the ***Dregs Series***. Both of these series have a significantly lower number of checkouts in comparison to the ***Grisha Trilogy***. 
 
+<<<<<<< HEAD
+=======
+``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1.R")}
+source("chart1.R")
+``````
+
+This line plot tracks total checkouts for each Grishaverse novel from the years 2017-2022. What's notable about these charts is that due to a couple of these novels (**King of Scars** and **Rule of Wolves**) being first published in 2019 and 2021 respectively, there is a lack of checkout data for each of them earlier than that point. What I would like to find out is what Grishaverse novels do people check out the most? How could factors such as BookTok popularity and the release of a TV adaptation influence the number of checkouts for each novel and series?
+
+The Grisha Trilogy (**Shadow and Bone**, **Siege and Storm**, and **Rising and Rising**) was Bardugo's first published trilogy, and as seen in the line chart, this series has been checked out the most from the Seattle Public Library. In particular, the first novel, **Shadow and Bone**, has been checked out **`r summary_info$sab_checkouts`** times between 2017 and 2022! Checkouts for **Shadow and Bone** (and the rest of the Grisha Trilogy by extension) shot up around 2021, which was around the time of the Netflix Adaptation's release, also titled Shadow and Bone.
+
+What I found most interesting about this chart was my own expectations. **Six of Crows** is one of the most widely known and loved young adult fantasy novels of the past few years, and it tops nearly any reader's recommendations list, especially with its popularity on BookTok, so why did the number of checkouts decline after 2021? **Six of Crows** is the only novel of the seven I looked at to face such a noticeable dropoff, as reflected in the series chart as well. Although its sequel, **Crooked Kingdom**, still had a steady number of checkouts between 2021 and 2022 (around 500), the *Gregs Series** still fell off in popularity compared to the **Grisha Trilogy** and the **King of Scars Duology**.
+>>>>>>> 68ba237644ac09c0b877cdd324a017a9fb0aa239
 
 ### Second Trends Over Time Chart
 
@@ -123,6 +172,14 @@ This bar chart tracks total checkouts for each Grishaverse novel from January to
 
 The number of checkouts between May and December remain around the same area, with a slight decrease from May to September. **October** of 2021 saw the highest number of checkouts with **`r summary_info$total_oct_checkouts`** checkouts! 
 
+<<<<<<< HEAD
+=======
+Here's an example of how to run an R script inside an RMarkdown file:
+
+``````{r, echo = FALSE, code = readLines("chart2.R")}
+source("chart2.R")
+``````
+>>>>>>> 68ba237644ac09c0b877cdd324a017a9fb0aa239
 
 ### Your Choice
 

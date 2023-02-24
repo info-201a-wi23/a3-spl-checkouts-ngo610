@@ -1,6 +1,7 @@
 library(dplyr)
 library(tidyverse)
 library(readr)
+<<<<<<< HEAD
 library(ggplot2)
 library("lubridate")
 library("viridis")
@@ -95,3 +96,10 @@ summary_info$total_oct_checkouts <- grishaverse_df %>%
   pull(oct_checkouts)
 
 summary_info$may_april_difference <- summary_info$total_may_checkouts - summary_info$total_april_checkouts
+=======
+
+library_df <- read_csv("~/info 201/a3-spl-checkouts-ngo610/2017-2023-10-Checkouts-SPL-Data.csv/2017-2023-10-Checkouts-SPL-Data.csv")
+
+leigh_bardugo_df <- library_df %>% 
+  filter(Creator == "Leigh Bardugo")
+>>>>>>> 68ba237644ac09c0b877cdd324a017a9fb0aa239
